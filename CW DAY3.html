@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback form</title>
+</head>
+<body>
+    <script language = "javascript" type = "text/javascript">
+        var feedback = "I loved the FOOD and the services!";
+        feedback = feedback.trim();
+        console.log("Trimmed feedback:",feedback);
+        feedback = feedback.toLowerCase();
+        console.log("Lowercase feedback:",feedback);
+        feedback = feedback.replace("food", "ambience");
+        console.log("Feedback after replacement:",feedback);
+        var servicePosition = feedback.indexOf("service");
+        console.log("Position of 'service':",servicePosition);
+        var feedbackArray = feedback.split(" ");
+        console.log("feedback array:",feedbackArray);
+        </script>
+        </body>
+</html>
