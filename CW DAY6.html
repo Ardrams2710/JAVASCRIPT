@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online grocery store</title>
+</head>
+<body>
+    <h2>Product Listing Feature</h2>
+    <script language = "javascript" type = "text/javascript">
+        let productNames = ["Apple","Orange","Grapes","Plum"];
+        let productPrices = [50,60,40,70];
+        let productList = [];
+        for (let i = 0; i <productNames.length; i++) {
+            productList.push(`product: ${productNames[i]} - Price: ${productPrices[i]}`);
+        }
+        console.log("Merged Product List:");
+        for (let item of productList) {
+            console.log(item);
+        }
+        productNames.push("Watermelon");
+        productPrices.push(80);
+        productList = [];
+        for (let i = 0; i<productNames.length;i++) {
+            productList.push(`product:${productNames[i]} - Price:${productPrices[i]}`);
+        }
+        console.log("\nUpdated Product List:");
+        for (let item of productList) { 
+            console.log(item);
+        }
+    </script>
+</body>
+</html>
