@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event reminder tool</title>
+</head>
+<body>
+    <script language = "javascript" type = "text/javascript">
+        let inputDate="1991-10-27";
+        let userDate=new Date(inputDate);
+        let currentDate=new Date();
+        let userYear=userDate.getFullYear();
+        let month=userDate.getMonth();
+        let months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+        let usermonthName=months[month];
+        let userrdate=userDate.getDate();
+        let currentYear=currentDate.getFullYear();
+        let currentMonth=currentDate.getMonth();
+        let currentMonthName=months[currentMonth];
+        let currenttDate=currentDate.getDate();
+        console.log("User input past date is "+usermonthName+" "+userrdate+","+userYear);
+        console.log("Current date is "+currentMonthName+" "+currenttDate+","+currentYear);
+        let noFullYear=currentYear-userYear;
+        console.log(`${noFullYear} full years have passed since that date.`);
+        let message=(noFullYear>1)?"It has been more than a year since that date":"It has been less than a year since that date.";
+        console.log(message);
+
+    </script>
+</body>
+</html>
