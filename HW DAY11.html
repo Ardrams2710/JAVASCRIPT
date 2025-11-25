@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user system</title>
+</head>
+<body>
+    <script language = "javascript" type = "text/javascript">
+        class User {
+	constructor(name,age,email){
+	this.name = name;
+	this.age = age;
+	this.email = email;
+    }
+    getName() {
+        return this.name;
+    }
+    getAuthor() {
+        return this.age;
+    }
+    setEmail(newEmail) {
+        if(typeof newEmail ==="string"&& newEmail.includes("@")) {
+        this.email = newEmail;
+        console.log(`Email updated to ${newEmail}`);
+        } else {
+            console.log(`Invalid Email: ${newEmail}`);
+        } 
+    }
+printDetails() {
+    console.log(`Name:${this.name}`);
+    console.log(`Age:${this.age}`);
+    console.log(`Email:${this.email}`);
+}
+        }
+        let user1=new User("Karthika",30,"karthika@gmail.com");
+user1.setEmail("incorrectemail.com");
+user1.setEmail("karthika@gmail.com");
+user1.printDetails();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+</head>
+<body>
+    <script language = "javascript" type = "text/javascript">
+        class Book {
+	constructor(title,author,price){
+	this.title = title;
+	this.author = author;
+	this.price = price;
+    }
+    getTitle() {
+        return this.title;
+    }
+    getAuthor() {
+        return this.author;
+    }
+    setPrice(newPrice) {
+        if(typeof newPrice ==='number'&& newPrice > 0) {
+        this.price = newPrice;
+        console.log(`price updated to ${newPrice}`);
+        } else {
+            console.log(`Invalid price: ${newPrice}`);
+        } 
+    }
+printDetails() {
+    console.log(`Title:${this.title}`);
+    console.log(`Author:${this.author}`);
+    console.log(`Price:${this.price}`);
+}
+        }
+let myBook=new Book("Ram c/o Anandhi","Akhil P Darmajan",300);
+myBook.setPrice(-100);
+myBook.setPrice("abc");
+myBook.setPrice(500);
+myBook.printDetails();
+</script>
+    </body>
+</html>
